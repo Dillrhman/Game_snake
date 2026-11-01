@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KELOMPOK 3 - KALKULUS IMPLEMENTASI TURUNAN</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+   <!-- MAIN MENU -->
+    <div id="mainMenu" class="menu-container">
+        <div class="menu-content">
+            <h1>SNAKE <span>KALKULUS</span></h1>
+            <p>KELOMPOK 3 | ANALISIS TURUNAN</p>
+            <button id="playBtn" class="primary-btn">Mulai Bermain</button>
+        </div>
+    </div>
+
+    <!--GAME-->
+    <div id="gameUI" class="app-container" style="display: none;">
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <!-- KONTROL MOBILE -->
+            <div class="mobile-controls" id="mobileControls">
+                <button class="dpad-btn" id="btnUp">▲</button>
+                <div class="dpad-row">
+                    <button class="dpad-btn" id="btnLeft">◄</button>
+                    <button class="dpad-btn" id="btnDown">▼</button>
+                    <button class="dpad-btn" id="btnRight">►</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="header">
+                <h1>Analitik Pertumbuhan</h1>
+                <p>Implementasi Turunan</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Panjang Ular </h3>
+                <div class="value" id="ui-length">3</div>
+                <div class="formula">Panjang awal = 3</div>
+            </div>
+
+            <div class="metric-card growth">
+                <h3>Laju Pertumbuhan </h3>
+                <div class="value" id="ui-growth">0.000</div>
+                <div class="formula">Semakin tinggi saat mendekati apel</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POP-UP GAME OVER -->
+    <div id="gameOverModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <p>CUPU AMAT BROKK</p>
+            
+            <!-- Skor Akhir -->
+            <div class="final-score-container">
+                PANJANG AKHIR: <span id="finalLength">3</span>
+            </div>
+
+            <div class="modal-actions">
+                <button id="restartBtn">Main Lagi</button>
+                <button id="backToMenuBtn" class="secondary-btn">Menu Utama</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
