@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mencegah zoom otomatis pada perangkat mobile saat menekan tombol berulang kali -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Analisis Kalkulus dL/dt - Snake Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- UI: MAIN MENU -->
+    <div id="mainMenu" class="menu-container">
+        <div class="menu-content">
+            <h1>SNAKE <span>CALCULUS</span></h1>
+            <p>Analisis Laju Pertumbuhan (dL/dt)</p>
+            <button id="playBtn" class="primary-btn">Mulai Bermain</button>
+        </div>
+    </div>
+
+    <!-- UI: GAME AREA -->
+    <div id="gameUI" class="app-container" style="display: none;">
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <!-- KONTROL MOBILE (D-PAD) -->
+            <div class="mobile-controls" id="mobileControls">
+                <button class="dpad-btn" id="btnUp">▲</button>
+                <div class="dpad-row">
+                    <button class="dpad-btn" id="btnLeft">◄</button>
+                    <button class="dpad-btn" id="btnDown">▼</button>
+                    <button class="dpad-btn" id="btnRight">►</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="header">
+                <h1>Analitik Pertumbuhan</h1>
+                <p>Implementasi dL/dt ≈ c * (v/s)</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Panjang Ular (L)</h3>
+                <div class="value" id="ui-length">3</div>
+                <div class="formula">Panjang awal = 3</div>
+            </div>
+
+            <div class="metric-card growth">
+                <h3>Laju Pertumbuhan (dL/dt)</h3>
+                <div class="value" id="ui-growth">0.000</div>
+                <div class="formula">Semakin tinggi saat mendekati apel</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI: POP-UP GAME OVER -->
+    <div id="gameOverModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <p>Ular menabrak dinding atau dirinya sendiri.</p>
+            <div class="modal-actions">
+                <button id="restartBtn">Main Lagi</button>
+                <button id="backToMenuBtn" class="secondary-btn">Menu Utama</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
